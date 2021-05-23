@@ -26,8 +26,7 @@
   },
   "scripts": {
     "android": "expo start --android",
-    "build": "next build && build:functions",
-    "build:functions": "netlify-lambda build functions && go get ./functions/... && go build -o functions/hello ./functions/hello.go",
+    "build": "next build",
     "eject": "expo eject",
     "export": "next export",
     "ios": "expo start --ios",
