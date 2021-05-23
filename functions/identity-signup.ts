@@ -24,7 +24,7 @@ const handler: Handler = async function (event, context) {
       password: user.password,
       created_on: currentDate.toLocaleString("en-GB", { timeZone: "UTC" }),
     },
-  }).catch((err) => console.error(err));
+  }).catch((err: string) => console.error(err));
 
   console.log(">>>>", user);
   console.log(hasuraRequest());
