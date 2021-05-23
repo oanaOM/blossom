@@ -1,11 +1,19 @@
 {
   "dependencies": {
+    "@netlify/functions": "^0.7.2",
+    "@reach/dialog": "^0.15.0",
+    "@reach/tabs": "^0.15.0",
+    "@reach/visually-hidden": "^0.15.0",
+    "axios": "^0.21.1",
     "expo": "~41.0.0",
+    "netlify-cli": "^3.30.4",
     "next": "^10.2.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "react-netlify-identity": "^0.2.5",
+    "react-netlify-identity-widget": "^0.2.7"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
@@ -17,12 +25,13 @@
     "typescript": "^4.2.4"
   },
   "scripts": {
-    "start": "next dev",
     "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "build": "next build",
     "eject": "expo eject",
-    "build": "next build"
+    "export": "next export",
+    "ios": "expo start --ios",
+    "start": "next dev",
+    "web": "expo start --web"
   },
   "private": true
 }

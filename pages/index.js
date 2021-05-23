@@ -1,14 +1,21 @@
 // @generated: @expo/next-adapter@2.1.52
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import  Hello  from '../components/hello';
+import AuthStatusView from "../components/AuthStatusView";
+import { IdentityContextProvider } from 'react-netlify-identity'
+import "react-netlify-identity-widget/styles.css";
+import "@reach/tabs/styles.css";
 
 export default function App() {
+  const url = process.env.REACT_APP_NETLIFY_IDENTITY_URL;
+console.log(process.env.REACT_APP_NETLIFY_IDENTITY_URL);
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Welcome to Expo + Next.js 👋</Text>
-      <Hello/>
-    </View>
+    <IdentityContextProvider url="https://youthful-tesla-6a4b5a.netlify.app">
+      <View style={styles.container}>
+        <Text style={styles.text}>Welcome to Blossom! </Text>
+        <AuthStatusView/>
+      </View>
+    </IdentityContextProvider>
   );
 }
 
