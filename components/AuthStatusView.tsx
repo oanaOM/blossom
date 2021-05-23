@@ -18,7 +18,6 @@ const AuthStatusView: React.FC = () => {
         identity.logoutUser()
     }
 
-    console.log(identity)
     
   return (
     <>
