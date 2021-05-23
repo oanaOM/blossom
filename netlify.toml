@@ -2,7 +2,7 @@
   command = "yarn start"
 
 [build]
-  command = "yarn build"
+  command = "yarn build && yarn export"
   publish = "out"
   functions = "functions"
 
