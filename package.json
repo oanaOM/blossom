@@ -17,12 +17,13 @@
     "typescript": "^4.2.4"
   },
   "scripts": {
-    "start": "next dev",
     "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "build": "next build",
     "eject": "expo eject",
-    "build": "next build"
+    "export": "next export",
+    "ios": "expo start --ios",
+    "start": "next dev",
+    "web": "expo start --web"
   },
   "private": true
 }
