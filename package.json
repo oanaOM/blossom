@@ -1,11 +1,19 @@
 {
   "dependencies": {
+    "@netlify/functions": "^0.7.2",
+    "@reach/dialog": "^0.15.0",
+    "@reach/tabs": "^0.15.0",
+    "@reach/visually-hidden": "^0.15.0",
+    "axios": "^0.21.1",
     "expo": "~41.0.0",
+    "netlify-cli": "^3.30.4",
     "next": "^10.2.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "react-netlify-identity": "^0.2.5",
+    "react-netlify-identity-widget": "^0.2.7"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
