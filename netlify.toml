@@ -1,0 +1,11 @@
+[dev]
+  command = "npm run dev"
+
+[build]
+  command = "npm run build"
+  publish = "out"
+  functions = "functions"
+
+[build.environment]
+# Change this path with the path to your repository
+GO_IMPORT_PATH="github.com/oanaOM/identity-signup"
