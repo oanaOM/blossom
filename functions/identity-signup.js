@@ -1,12 +1,8 @@
 const { hasuraRequest } = require("./util/hasura");
 
-import { Handler } from "@netlify/functions";
-
-
-const handler: Handler = async function (event, context) {
-  const { user } = event.body ? JSON.parse(event.body) : {user:{}};
-
-  const currentDate = new Date(Date.now())
+exports.handler = async function (event) {
+   const { user } = JSON.parse(event.body);
+  const currentDate = new Date(Date.now());
 
   const data = await hasuraRequest({
     query: `
@@ -24,10 +20,10 @@ const handler: Handler = async function (event, context) {
       password: user.password,
       created_on: currentDate.toLocaleString("en-GB", { timeZone: "UTC" }),
     },
-  }).catch((err: string) => console.error(err));
+  }).catch((err) => console.error(err));
 
   console.log(">>>>", user);
-  console.log(hasuraRequest());
+
 
   return {
     statusCode: 200,
@@ -35,4 +31,3 @@ const handler: Handler = async function (event, context) {
   };
 };
 
-export {handler}

@@ -9,7 +9,7 @@ exports.hasuraRequest = async function ({ query, variables = {} }) {
     body: JSON.stringify({ query, variables }),
   })
     .then((res) => res.json())
-    .catch((err) => new Error("Ups, something went wrong in hasura: ", err));
+      .catch((err) => { throw new Error("Ups, something went wrong in hasura: ", err) });
 
     // TODO: see if  it's better to return the error or log it on the server and return an empty array
     //   if (!result || !result.data) {
